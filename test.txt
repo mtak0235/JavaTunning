@@ -1,0 +1,93 @@
+2022-06-01 15:31:58
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (24.80-b11 mixed mode):
+
+"Attach Listener" daemon prio=5 tid=0x00007fa9c0008800 nid=0x3c07 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"dump.thr1.Thread3" prio=5 tid=0x00007fa9da05e000 nid=0x5703 waiting for monitor entry [0x000070000b5a5000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at dump.thr1.Thread3.run(Thread3.java:15)
+	- waiting to lock <0x00000006aaad1f70> (a java.lang.Object)
+
+"dump.thr1.Thread2" prio=5 tid=0x00007fa9da05d800 nid=0xa503 waiting for monitor entry [0x000070000b4a2000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at dump.thr1.Thread2.run(Thread2.java:15)
+	- waiting to lock <0x00000006aaad1f70> (a java.lang.Object)
+
+"dump.thr1.Thread1" prio=5 tid=0x00007fa9da05c800 nid=0x5603 waiting on condition [0x000070000b39f000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at dump.thr1.Thread1.asleep(Thread1.java:23)
+	at dump.thr1.Thread1.run(Thread1.java:16)
+	- locked <0x00000006aaad1f70> (a java.lang.Object)
+
+"Service Thread" daemon prio=5 tid=0x00007fa9da052000 nid=0x5503 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" daemon prio=5 tid=0x00007fa9d882b000 nid=0x4003 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" daemon prio=5 tid=0x00007fa9d000b000 nid=0x3e03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=5 tid=0x00007fa9d000a000 nid=0x4203 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=5 tid=0x00007fa9d0008800 nid=0x4b03 in Object.wait() [0x000070000ac87000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006aaa84858> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	- locked <0x00000006aaa84858> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler" daemon prio=5 tid=0x00007fa9d980a800 nid=0x3703 in Object.wait() [0x000070000ab84000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006aaa84470> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:503)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+	- locked <0x00000006aaa84470> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00007fa9d8808800 nid=0xd03 in Object.wait() [0x0000700009c57000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000006aaad4148> (a dump.thr1.Thread1)
+	at java.lang.Thread.join(Thread.java:1281)
+	- locked <0x00000006aaad4148> (a dump.thr1.Thread1)
+	at java.lang.Thread.join(Thread.java:1355)
+	at dump.thr1.Std01Thread.main(Std01Thread.java:11)
+
+"VM Thread" prio=5 tid=0x00007fa9da03e800 nid=0x3503 runnable 
+
+"GC task thread#0 (ParallelGC)" prio=5 tid=0x00007fa9d880f000 nid=0x2307 runnable 
+
+"GC task thread#1 (ParallelGC)" prio=5 tid=0x00007fa9d880f800 nid=0x2203 runnable 
+
+"GC task thread#2 (ParallelGC)" prio=5 tid=0x00007fa9d881b000 nid=0x2103 runnable 
+
+"GC task thread#3 (ParallelGC)" prio=5 tid=0x00007fa9d881b800 nid=0x2a03 runnable 
+
+"GC task thread#4 (ParallelGC)" prio=5 tid=0x00007fa9d881c000 nid=0x5403 runnable 
+
+"GC task thread#5 (ParallelGC)" prio=5 tid=0x00007fa9d881d000 nid=0x2d03 runnable 
+
+"GC task thread#6 (ParallelGC)" prio=5 tid=0x00007fa9d881d800 nid=0x5303 runnable 
+
+"GC task thread#7 (ParallelGC)" prio=5 tid=0x00007fa9d881e000 nid=0x5103 runnable 
+
+"GC task thread#8 (ParallelGC)" prio=5 tid=0x00007fa9d881e800 nid=0x5003 runnable 
+
+"GC task thread#9 (ParallelGC)" prio=5 tid=0x00007fa9da008800 nid=0x4f03 runnable 
+
+"GC task thread#10 (ParallelGC)" prio=5 tid=0x00007fa9da009000 nid=0x3203 runnable 
+
+"GC task thread#11 (ParallelGC)" prio=5 tid=0x00007fa9da009800 nid=0x3403 runnable 
+
+"GC task thread#12 (ParallelGC)" prio=5 tid=0x00007fa9da00a000 nid=0x4d03 runnable 
+
+"VM Periodic Task Thread" prio=5 tid=0x00007fa9d8826000 nid=0xa803 waiting on condition 
+
+JNI global references: 108
+
